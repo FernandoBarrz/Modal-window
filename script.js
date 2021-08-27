@@ -25,3 +25,12 @@ for (let i = 0; i < btnOpenModal.length; i++) {
 // Close Modal
 btnCloseModal.addEventListener('click', hideModal);
 overlay.addEventListener('click', hideModal);
+
+// Using the Esc key from the keyboard
+const escKeyDown = event => {
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    hideModal();
+  }
+};
+
+document.addEventListener('keydown', escKeyDown);
