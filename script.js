@@ -9,7 +9,6 @@ const btnOpenModal = document.querySelectorAll('.show-modal');
 const displayModal = () => {
   modal.classList.remove('hidden');
   overlay.classList.remove('hidden');
-  console.log('You clicked');
 };
 
 const hideModal = () => {
@@ -22,4 +21,7 @@ const hideModal = () => {
 for (let i = 0; i < btnOpenModal.length; i++) {
   btnOpenModal[i].addEventListener('click', displayModal);
 }
+
+// Close Modal
 btnCloseModal.addEventListener('click', hideModal);
+overlay.addEventListener('click', hideModal);
